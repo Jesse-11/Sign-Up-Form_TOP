@@ -1,0 +1,43 @@
+:root {
+    --main_color: darkgray;
+    --text_color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    color: var(--text_color);
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content,
+.logo {
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.picture {
+    background-image: url(./images/neon-street.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 40vw;
+}
+
+.logo {
+    height: auto;
+    position: relative;
+    width: 60vw;
+    top: 20vh;
+    gap: 1vw;
+    padding:15px 0;
+
+    justify-content: center;
+    align-items: center;
+}
