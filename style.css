@@ -8,7 +8,9 @@
 body {
     font-family: 'Arial', sans-serif; 
     line-height: 1.6; 
-    background-color: #f4f4f4; 
+    background-image: url('images/neon-street.jpg');
+    background-size: cover;
+    
 }
 
 /* ------- CONTAINER STYLES ------- */
@@ -17,12 +19,15 @@ body {
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
+    margin: 40px auto;
     max-width: 900px; 
-    margin: 30px auto; 
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative;
+
+
 }
 
 /* ------- LEFT COLUMN STYLES ------- */
@@ -34,12 +39,12 @@ body {
     text-align: center;
     flex-direction: column;
     align-items: center;
+    
 }
 
-.picture {
+.main {
     width: 150px; 
     height: 150px; 
-    background-image: url('images/neon-street.jpg'); 
     background-size: cover;       
     background-position: center; 
     border-radius: 50%;;
@@ -51,7 +56,12 @@ body {
     font-size: 25px;
     font-weight: bold;
     position: relative;
-    top: -35px;
+    top: -5px;
+}
+
+.github-link {
+    color: black;
+    text-decoration: underline;
 }
 
 /* ------- RIGHT COLUMN STYLES ------- */
@@ -107,7 +117,7 @@ body {
     text-align: center;
 }
 
-.log-in a {
+.login-link  {
     color: #007bff; 
 }
 
@@ -123,10 +133,46 @@ body {
     }
 }
 
+/* ------ Theme Buttons -------- */
+.theme-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+
+
+.sun-icon {
+    display: none; /* Hide by default */
+    width: 50px;
+    height: 50px;
+    color: #f0f0f0;
+}
+
+.sun-icon.active {
+    display: block; /* Show when active */
+}
+
+.moon-icon {
+    display: none; /* Show by default */
+    width:50px;
+    height: 50px;
+}
+
+.moon-icon.active {
+    display: block; /* Hide when active */
+}
+
 /* ------- DARK MODE STYLES ------- */
 body.dark-mode {
     background-color: #222;
     color: #f0f0f0;  
+}
+
+body.dark-mode .github-link {
+    color: #f0f0f0; 
+
 }
 
 body.dark-mode .content {
@@ -140,9 +186,9 @@ body.dark-mode .input input {
 }
 
 body.dark-mode .button button {
-    background-color: #555;  
+    background-color: #7f24f7;  
 }
 
-body.dark-mode .log-in a {
-    color: #99f; 
+body.dark-mode .login-link  {
+    color: #7f24f7; 
 }
